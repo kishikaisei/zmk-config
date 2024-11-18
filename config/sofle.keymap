@@ -27,6 +27,22 @@
         };
     };
 
+    macros {
+        pwd_macro: pwd_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(K) &kp A &kp Z &kp E &kp N7 &kp N4 &kp N1 &kp N0 &kp COMMA &kp SEMI &kp COLON &kp EXCL &kp N0 &kp N9 &kp N0 &kp N1 &kp N1 &kp N2 &kp N5 &kp N2 &kp N5 &kp N2 &kp N6 &kp ENTER>;
+            label = "PWD_MACRO";
+        };
+
+        login_macro: login_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp B &kp P &kp DOT &kp N &kp M &kp E &kp S &kp S &kp E &kp L &kp M &kp A &kp N &kp I &kp TAB &pwd_macro>;
+            label = "LOGIN_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -104,11 +120,11 @@
 
             display-name = "adjust";
             bindings = <
-&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &none  &none  &none  &none  &none  &none
-&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                            &none  &none  &none  &none  &none  &none
-&none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                                      &none  &none  &none  &none  &none  &none
-&none              &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none  &none  &none  &none  &none  &none
-                                    &none            &none            &none            &none            &none              &none  &none  &none  &none  &none
+&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &none  &none       &none         &none  &none  &none
+&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                            &none  &none       &none         &none  &none  &none
+&none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                                      &none  &pwd_macro  &login_macro  &none  &none  &none
+&none              &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none  &none       &none         &none  &none  &none
+                                    &none            &none            &none            &none            &none              &none  &none  &none       &none         &none
             >;
         };
 
