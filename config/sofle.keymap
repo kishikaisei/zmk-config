@@ -34,7 +34,7 @@
         pwd_macro: pwd_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(K) &kp A &kp Z &kp E &kp N7 &kp N4 &kp N1 &kp N0 &kp COMMA &kp SEMI &kp COLON &kp EXCL &kp N0 &kp N9 &kp N0 &kp N1 &kp N1 &kp N2 &kp N5 &kp N2 &kp N5 &kp N2 &kp N6 &kp ENTER>;
+            bindings = <&kp LS(K) &kp A &kp Z &kp E &kp N7 &kp N4 &kp N1 &kp N0 &kp COMMA &kp SEMI &kp COLON &kp EXCL &kp N0 &kp N9 &kp N0 &kp N1 &kp N1 &kp N2 &kp N5 &kp N2 &kp N5 &kp N2 &kp N7 &kp ENTER>;
             label = "PWD_MACRO";
         };
 
@@ -69,7 +69,7 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&gresc         &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                                     &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &kp BACKSPACE
+&kp ESCAPE     &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                                     &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &kp BACKSPACE
 &kp TAB        &kp Q   &kp W     &kp E     &kp R      &kp T                                      &kp Y      &kp U      &kp I      &kp O     &kp P     &kp LEFT_BRACKET
 &kp BACKSLASH  &kp A   &kp S     &kp D     &kp F      &kp G                                      &kp H      &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
 &kp LSHFT      &kp Z   &kp X     &kp C     &kp V      &kp B      &kp C_MUTE    &kp C_PLAY_PAUSE  &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
