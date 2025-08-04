@@ -34,7 +34,7 @@
         pwd_macro: pwd_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(K) &kp A &kp Z &kp E &kp N7 &kp N4 &kp N1 &kp N0 &kp COMMA &kp SEMI &kp COLON &kp EXCL &kp N0 &kp N9 &kp N0 &kp N1 &kp N1 &kp N2 &kp N5 &kp N2 &kp N5 &kp N3 &kp N0 &kp ENTER>;
+            bindings = <&kp LS(K) &kp A &kp Z &kp E &kp N7 &kp N4 &kp N1 &kp N0 &kp COMMA &kp SEMI &kp COLON &kp EXCL &kp N0 &kp N9 &kp N0 &kp N1 &kp N1 &kp N2 &kp N5 &kp N2 &kp N5 &kp N3 &kp N1 &kp ENTER>;
             label = "PWD_MACRO";
         };
 
